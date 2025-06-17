@@ -36,6 +36,7 @@ class CheckoutScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
+            Image.asset('assets/images/xburger.png', height: 50, width: 50),
             Text(
               '${quantity}x ${hamburguer.name}',
               style: const TextStyle(fontSize: 16),
@@ -63,7 +64,7 @@ class CheckoutScreen extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                    color: Color.fromARGB(255, 231, 24, 9),
                   ),
                 ),
               ],
@@ -73,12 +74,12 @@ class CheckoutScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepOrange,
+                  backgroundColor: Color.fromARGB(255, 231, 24, 9),
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Pedido finalizado com sucesso!')),
+                    const SnackBar(content: Text('Pedido finalizado com sucesso!', style: TextStyle(color: Colors.green),)),
                   );
                   Navigator.popUntil(context, (route) => route.isFirst);
                 },

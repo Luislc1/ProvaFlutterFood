@@ -11,15 +11,16 @@ class HamburgueriaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hamburgueria Delícia',
+      debugShowCheckedModeBanner: false,
+      title: 'Hamburgueria',
       theme: ThemeData(
         primarySwatch: Colors.orange,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepOrange,
+          seedColor: Color.fromARGB(255, 231, 24, 9),
           secondary: Colors.amber,
         ),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Color.fromARGB(255, 231, 24, 9),
           foregroundColor: Colors.white,
         ),
       ),

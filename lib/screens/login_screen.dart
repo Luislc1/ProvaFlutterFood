@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Hamburgueria Delícia')),
+      appBar: AppBar(title: const Text('Hamburgueria', style: TextStyle(fontSize: 25)), centerTitle: true,),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -69,12 +69,13 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/logo.png',
-                height: 120,
+                'assets/images/hamburguer.png',
+                height: 100,
+                width: 100,
                 errorBuilder: (context, error, stackTrace) => const Icon(
                   Icons.fastfood,
                   size: 100,
-                  color: Colors.deepOrange,
+                  color: Color.fromARGB(255, 231, 24, 9),
                 ),
               ),
               const SizedBox(height: 20),
@@ -113,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Color.fromARGB(255, 231, 24, 9),
                     padding: const EdgeInsets.symmetric(vertical: 16),
                   ),
                   onPressed: () => _login(false),
@@ -128,13 +129,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    side: const BorderSide(color: Colors.deepOrange),
+                    side: const BorderSide(color: Color.fromARGB(255, 231, 24, 9)),
                     padding: const EdgeInsets.symmetric(vertical: 16),
                   ),
                   onPressed: () => _login(true),
                   child: const Text(
                     'Entrar como Administrador',
-                    style: TextStyle(color: Colors.deepOrange),
+                    style: TextStyle(color: Color.fromARGB(255, 231, 24, 9)),
                   ),
                 ),
               ),

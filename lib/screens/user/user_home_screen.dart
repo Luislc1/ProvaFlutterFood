@@ -16,8 +16,7 @@ class UserHomeScreen extends StatefulWidget {
 class _UserHomeScreenState extends State<UserHomeScreen> {
   int _currentIndex = 0;
   final PageController _pageController = PageController();
-  
-  // Dados temporários para demonstração
+
   final Hamburguer _demoHamburguer = Hamburguer(
     id: '1',
     name: 'X-Burguer',
@@ -29,7 +28,6 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
   final List<Additional> _demoAdditionals = [];
   int _demoQuantity = 1;
 
-  // Lista de telas agora precisa ser inicializada no initState
   late final List<Widget> _screens;
 
   @override
@@ -56,7 +54,7 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hamburgueria Delícia'),
+        title: const Text('Hamburgueria'),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
@@ -88,7 +86,7 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
             );
           });
         },
-        selectedItemColor: Colors.deepOrange,
+        selectedItemColor: Color.fromARGB(255, 231, 24, 9),
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(

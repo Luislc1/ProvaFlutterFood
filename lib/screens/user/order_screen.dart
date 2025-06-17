@@ -6,7 +6,7 @@ import 'checkout_screen.dart';
 
 class OrderScreen extends StatefulWidget {
   final Hamburguer hamburguer;
-  
+
   const OrderScreen({super.key, required this.hamburguer});
 
   @override
@@ -23,7 +23,7 @@ class _OrderScreenState extends State<OrderScreen> {
       appBar: AppBar(
         title: Text(widget.hamburguer.name),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,19 +52,19 @@ class _OrderScreenState extends State<OrderScreen> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             ...mockAdditionals.map((additional) => CheckboxListTile(
-              title: Text(additional.name),
-              subtitle: Text('+ R\$${additional.price.toStringAsFixed(2)}'),
-              value: selectedAdditionals.contains(additional),
-              onChanged: (bool? value) {
-                setState(() {
-                  if (value == true) {
-                    selectedAdditionals.add(additional);
-                  } else {
-                    selectedAdditionals.remove(additional);
-                  }
-                });
-              },
-            )),
+                  title: Text(additional.name),
+                  subtitle: Text('+ R\$${additional.price.toStringAsFixed(2)}'),
+                  value: selectedAdditionals.contains(additional),
+                  onChanged: (bool? value) {
+                    setState(() {
+                      if (value == true) {
+                        selectedAdditionals.add(additional);
+                      } else {
+                        selectedAdditionals.remove(additional);
+                      }
+                    });
+                  },
+                )),
             const SizedBox(height: 16),
             Row(
               children: [
@@ -91,12 +91,12 @@ class _OrderScreenState extends State<OrderScreen> {
                 ),
               ],
             ),
-            const Spacer(),
+            const SizedBox(height: 24),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepOrange,
+                  backgroundColor: Color.fromARGB(255, 231, 24, 9),
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
                 onPressed: () {

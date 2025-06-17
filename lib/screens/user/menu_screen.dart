@@ -17,9 +17,10 @@ class MenuScreen extends StatelessWidget {
           return Card(
             margin: const EdgeInsets.symmetric(vertical: 8),
             child: ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.orange[100],
-                child: const Icon(Icons.fastfood, color: Colors.deepOrange),
+              leading: Image(
+                image: AssetImage(hamburguer.image),
+                width: 30,
+                height: 30,
               ),
               title: Text(hamburguer.name),
               subtitle: Text(hamburguer.description),
@@ -27,7 +28,7 @@ class MenuScreen extends StatelessWidget {
                 'R\$${hamburguer.price.toStringAsFixed(2)}',
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.deepOrange,
+                  color: Color.fromARGB(255, 231, 24, 9),
                 ),
               ),
               onTap: () {
