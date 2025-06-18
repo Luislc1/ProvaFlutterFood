@@ -17,10 +17,9 @@ class MenuScreen extends StatelessWidget {
           return Card(
             margin: const EdgeInsets.symmetric(vertical: 8),
             child: ListTile(
-              leading: Image(
-                image: AssetImage(hamburguer.image),
-                width: 30,
-                height: 30,
+              leading: Icon(
+                Icons.fastfood,
+                color: Colors.black,
               ),
               title: Text(hamburguer.name),
               subtitle: Text(hamburguer.description),

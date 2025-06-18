@@ -43,7 +43,7 @@ class _OrderScreenState extends State<OrderScreen> {
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepOrange,
+                color: Color.fromARGB(255, 231, 24, 9),
               ),
             ),
             const SizedBox(height: 24),

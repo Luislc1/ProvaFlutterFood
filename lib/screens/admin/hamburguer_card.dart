@@ -3,10 +3,14 @@ import 'package:app/models/hamburguer.dart';
 
 class HamburguerCard extends StatelessWidget {
   final Hamburguer hamburguer;
+  final VoidCallback onEdit;
+  final VoidCallback onDelete;
 
   const HamburguerCard({
     super.key,
     required this.hamburguer,
+    required this.onEdit,
+    required this.onDelete,
   });
 
   @override
@@ -45,11 +49,11 @@ class HamburguerCard extends StatelessWidget {
               children: [
                 IconButton(
                   icon: const Icon(Icons.edit, color: Colors.blue),
-                  onPressed: (){},
+                  onPressed: onEdit,
                 ),
                 IconButton(
                   icon: const Icon(Icons.delete, color: Colors.red),
-                  onPressed: (){},
+                  onPressed: onDelete,
                 ),
               ],
             ),
